@@ -62,17 +62,21 @@ function init() {
 
     sound.volume = volume.value/100;
     if(volume.value == 0){
-      img.src = 'assets\\icons\\volume-level-0.svg'
+      img.src = 'assets\\icons\\volume-level-0.svg';
+      button.disabled = true;
     }
     else if(volume.value < 33){
-      img.src = 'assets\\icons\\volume-level-1.svg'
+      img.src = 'assets\\icons\\volume-level-1.svg';
+      button.disabled = false;
     }
     else if(volume.value < 67){
-      img.src = 'assets\\icons\\volume-level-2.svg'
+      img.src = 'assets\\icons\\volume-level-2.svg';
+      button.disabled = false;
       
     }
     else {
-      img.src = 'assets\\icons\\volume-level-3.svg'
+      img.src = 'assets\\icons\\volume-level-3.svg';
+      button.disabled = false;
     }
   });
   
